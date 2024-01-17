@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
-import theme from "@src/styles/theme";
 
 export const Container = styled.View`
   padding: ${RFValue(10)}px;
@@ -9,14 +8,17 @@ export const Container = styled.View`
 export const ContentHeader = styled.View`
   align-items: center;
   justify-content: center;
-  padding: ${RFValue(10)}px;
+  padding: 10px;
 `;
 
 export const ContentBody = styled.View``;
 
 export const ContentFooter = styled.View``;
 
-export const ViewButton = styled.View``;
+export const ViewButton = styled.View`
+  flex-direction: row;
+  padding: 10px;
+`;
 
 export const Title = styled.Text`
   text-align: center;
@@ -27,6 +29,6 @@ export const Title = styled.Text`
 
 export const Description = styled.Text`
   margin-top: ${RFValue(60)}px;
-  font-size: ${RFValue(15)}px;
+  font-size: ${RFValue(12)}px;
   font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
 `;

@@ -11,7 +11,10 @@ export const LoginScreen = ({}) => {
         <S.ContentHeader>
           <S.Title>Welcome{"\n"}back</S.Title>
           <S.Description>Sign up with</S.Description>
-          <ButtonSocial title="Google"></ButtonSocial>
+          <S.ViewButton>
+            <ButtonSocial social="Google" children />
+            <ButtonSocial social="Facebook" children />
+          </S.ViewButton>
         </S.ContentHeader>
         <S.ContentBody></S.ContentBody>
         <S.ContentFooter></S.ContentFooter>
