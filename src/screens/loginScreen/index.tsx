@@ -3,6 +3,7 @@ import React from "react";
 import * as S from "./styles";
 import { SafeAreaView } from "react-native";
 import { ButtonSocial } from "@src/components/ButtonSocial";
+import { Input } from "@src/components/Input";
 
 export const LoginScreen = ({}) => {
   return (
@@ -16,7 +17,9 @@ export const LoginScreen = ({}) => {
             <ButtonSocial social="Facebook" children />
           </S.ViewButton>
         </S.ContentHeader>
-        <S.ContentBody></S.ContentBody>
+        <S.ContentBody>
+          <Input iconName="email" name="email" />
+        </S.ContentBody>
         <S.ContentFooter></S.ContentFooter>
       </S.Container>
     </SafeAreaView>
