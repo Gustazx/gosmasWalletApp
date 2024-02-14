@@ -3,13 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { LoginScreen } from "@src/screens/loginScreen";
 
-export type AppStackParamList = {
-  loginScreen: undefined;
-};
+const Stack = createNativeStackNavigator();
 
-const Stack = createNativeStackNavigator<AppStackParamList>();
-
-export const Routes = () => {
+export const AuthStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>

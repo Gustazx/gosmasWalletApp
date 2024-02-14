@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { Routes } from "@src/routes/routes";
+import * as eva from "@eva-design/eva";
 import { ThemeProvider } from "styled-components";
 
 import {
@@ -16,8 +16,13 @@ import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 
 import COLORS from "./src/styles/theme";
+import { AppStack } from "@src/routes/AppStack";
+import { AuthStack } from "@src/routes/AuthStack";
+import { ApplicationProvider, Spinner } from "@ui-kitten/components";
 
 export default function App({}) {
+  const auth = false;
+
   const [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_400Regular,
@@ -34,8 +39,10 @@ export default function App({}) {
 
   return (
     <ThemeProvider theme={COLORS}>
-      <StatusBar style="dark" translucent backgroundColor="transparent" />
-      <Routes />
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <StatusBar style="dark" translucent backgroundColor="transparent" />
+        {auth ? <AppStack /> : <AuthStack />}
+      </ApplicationProvider>
     </ThemeProvider>
   );
 }

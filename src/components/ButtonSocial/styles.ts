@@ -13,7 +13,7 @@ export const Button = styled.TouchableOpacity<{
   border-radius: ${RFValue(25)}px;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme, social }) =>
-    social === "Google" ? theme.COLORS.GRAY5 : theme.COLORS.BLUE1};
+    social === "Google" ? theme.COLORS.WHITE : theme.COLORS.BLUE1};
 `;
 
 export const SocialIcon = styled.Image`
