@@ -16,13 +16,13 @@ import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 
 import COLORS from "./src/styles/theme";
-import { AppStack } from "@src/routes/AppStack";
-import { AuthStack } from "@src/routes/AuthStack";
-import { ApplicationProvider, Spinner } from "@ui-kitten/components";
+import { ApplicationProvider } from "@ui-kitten/components";
+import { AppRoutes } from "@src/routes/appRoutes";
+import { AuthRoutes } from "@src/routes/authRoutes";
+import { Routes } from "@src/routes/routes";
+import { AuthContextProvider } from "@src/contexts/authContext";
 
 export default function App({}) {
-  const auth = false;
-
   const [fontsLoaded] = useFonts({
     Poppins_300Light,
     Poppins_400Regular,
@@ -40,8 +40,10 @@ export default function App({}) {
   return (
     <ThemeProvider theme={COLORS}>
       <ApplicationProvider {...eva} theme={eva.light}>
-        <StatusBar style="dark" translucent backgroundColor="transparent" />
-        {auth ? <AppStack /> : <AuthStack />}
+        <AuthContextProvider>
+          <StatusBar style="dark" translucent backgroundColor="transparent" />
+          <Routes />
+        </AuthContextProvider>
       </ApplicationProvider>
     </ThemeProvider>
   );

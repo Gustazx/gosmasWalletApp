@@ -8,8 +8,10 @@ import theme from "@src/styles/theme";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Button } from "@src/components/Button";
+import { useAuthContext } from "@src/contexts/authContext";
 
 export const LoginScreen = ({ navigation }: any) => {
+  const { signIn } = useAuthContext();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [visible, setVisible] = useState<boolean>(true);
@@ -25,9 +27,16 @@ export const LoginScreen = ({ navigation }: any) => {
         </S.ViewButton>
       </S.ContentHeader>
       <S.ContentBody>
-        <Input name="Username" iconName="person-outline" />
+        <Input
+          name="Username"
+          iconName="person-outline"
+          value={email}
+          onChangeText={setEmail}
+        />
         <Input
           name="Password"
+          value={password}
+          onChangeText={setPassword}
           iconName="key-outline"
           secureTextEntry={visible}
           accessoryRight={() => (
@@ -45,7 +54,13 @@ export const LoginScreen = ({ navigation }: any) => {
         />
       </S.ContentBody>
       <S.ContentFooter>
-        <Button onPress={() => console.log("t")}>Login</Button>
+        <Button
+          onPress={() => {
+            signIn(email, password);
+          }}
+        >
+          Login
+        </Button>
       </S.ContentFooter>
     </S.Container>
   );
