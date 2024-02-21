@@ -20,7 +20,6 @@ export const Button = ({ children, ...rest }: ButtonProps) => {
         width: 190,
         height: 60,
         borderRadius: 16,
-        backgroundColor: theme.COLORS.PURPLEDARK2,
       }}
     >
       {(evaProps) => (
