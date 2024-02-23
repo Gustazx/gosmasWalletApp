@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }: IAuthProviderProps) => {
   );
 
   const signIn = useCallback(async (email: string, password: string) => {
-    if (email === "a" && password === "a") {
+    if (email === "" && password === "") {
       setAuthState("valido");
       console.log(authState);
     }
