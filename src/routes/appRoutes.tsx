@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { HomeScreen } from "@src/screens/homeScreen";
+import { TabRoutes } from "./tabRoutes";
 
 const Stack = createNativeStackNavigator();
 
@@ -9,8 +9,8 @@ export const AppRoutes = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="home"
-          component={HomeScreen}
+          name="tab"
+          component={TabRoutes}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

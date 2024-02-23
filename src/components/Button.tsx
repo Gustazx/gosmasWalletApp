@@ -32,7 +32,7 @@ export const Button = ({ children, ...rest }: ButtonProps) => {
             fontSize: 18,
           }}
         >
-          Login
+          {children}
         </Text>
       )}
     </UIButton>

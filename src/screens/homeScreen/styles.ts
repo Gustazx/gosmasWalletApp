@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 export const Container = styled.View`
   padding: ${RFValue(25)}px;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
-  height: 100%;
+  flex: 1;
 `;
 
 export const ContentHeader = styled.View`

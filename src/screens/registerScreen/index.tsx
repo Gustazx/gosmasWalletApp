@@ -10,16 +10,15 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { Button } from "@src/components/Button";
 import { useAuthContext } from "@src/contexts/authContext";
 
-export const LoginScreen = ({ navigation }: any) => {
-  const { signIn } = useAuthContext();
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+export const RegisterScreen = ({ navigation }: any) => {
   const [visible, setVisible] = useState<boolean>(true);
 
   return (
     <S.Container>
       <S.ContentHeader>
-        <S.Title>Welcome{"\n"}back</S.Title>
+        <S.Title>
+          Immediately feel the ease of transacting just by registering
+        </S.Title>
         <S.Description>Sign up with</S.Description>
         <S.ViewButton>
           <ButtonSocial social="Google" />
@@ -27,16 +26,10 @@ export const LoginScreen = ({ navigation }: any) => {
         </S.ViewButton>
       </S.ContentHeader>
       <S.ContentBody>
-        <Input
-          name="Username"
-          iconName="person-outline"
-          value={email}
-          onChangeText={setEmail}
-        />
+        <Input name="Username" iconName="person-outline" />
+        <Input name="Email" iconName="mail-outline" />
         <Input
           name="Password"
-          value={password}
-          onChangeText={setPassword}
           iconName="key-outline"
           secureTextEntry={visible}
           accessoryRight={() => (
@@ -54,15 +47,9 @@ export const LoginScreen = ({ navigation }: any) => {
         />
       </S.ContentBody>
       <S.ContentFooter>
-        <Button
-          onPress={() => {
-            signIn(email, password);
-          }}
-        >
-          Login
-        </Button>
-        <S.RegisterText onPress={() => navigation.replace("registerScreen")}>
-          Don't have an account yet? Register
+        <Button>Register</Button>
+        <S.RegisterText onPress={() => navigation.replace("loginScreen")}>
+          You have account? Login
         </S.RegisterText>
       </S.ContentFooter>
     </S.Container>
