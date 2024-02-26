@@ -5,7 +5,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import theme from "@src/styles/theme";
 import { NotificationScreen } from "@src/screens/notificationScreen";
 import { SettingsScreen } from "@src/screens/settingsScreen";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 
 export type TabParamlist = {
   homeScreen: undefined;
@@ -38,7 +38,7 @@ export const TabRoutes = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                paddingTop: 25,
+                paddingTop: Platform.OS === "ios" ? 25 : 0,
               }}
             >
               <Ionicons name={iconName!} size={size} color="white" />
