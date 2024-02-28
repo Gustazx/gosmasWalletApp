@@ -2,15 +2,13 @@ import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
-  padding: ${RFValue(25)}px;
-  flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  padding: ${RFValue(30)}px;
 `;
 
 export const ContentHeader = styled.View`
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: ${RFValue(5)}px;
 `;
 
 export const ContentBody = styled.View`
@@ -20,12 +18,12 @@ export const ContentBody = styled.View`
 
 export const ContentFooter = styled.View`
   align-items: center;
-  margin-top: 60px;
+  margin-top: ${RFValue(50)}px;
 `;
 
 export const ViewButton = styled.View`
   flex-direction: row;
-  padding: 10px;
+  padding: ${RFValue(10)}px;
 `;
 
 export const Title = styled.Text`
@@ -35,7 +33,7 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
 `;
 
-export const RegisterText = styled.Text.attrs({})`
+export const LoginText = styled.Text`
   font-size: ${RFValue(10)}px;
   padding-top: ${RFValue(10)}px;
   font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};

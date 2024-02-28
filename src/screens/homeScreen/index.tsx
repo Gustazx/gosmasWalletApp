@@ -7,11 +7,10 @@ export const HomeScreen = ({}) => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <S.ProfileColumn>
-          <S.Title>Wallet</S.Title>
-          <S.SubTitle>Active</S.SubTitle>
-        </S.ProfileColumn>
-
+        <S.HeaderColumn>
+          <S.AppName>Wallet</S.AppName>
+          <S.Status>Active</S.Status>
+        </S.HeaderColumn>
         <S.Avatar source={Gato} />
       </S.ContentHeader>
       <S.ContentBody>
