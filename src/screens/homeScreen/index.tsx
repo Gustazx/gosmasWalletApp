@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { Card } from "./components/Card";
+import { Card } from "./components/homeCard";
 import Gato from "@src/assets/gato.jpeg";
 
 export const HomeScreen = ({}) => {

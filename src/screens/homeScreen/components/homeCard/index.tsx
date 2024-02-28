@@ -1,5 +1,4 @@
 import theme from "@src/styles/theme";
-import { Card as UICard } from "@ui-kitten/components";
 import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
 
