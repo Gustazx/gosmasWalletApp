@@ -7,7 +7,7 @@ export const Card = () => {
   return (
     <TouchableOpacity
       style={{
-        width: 340,
+        width: 320,
         height: 140,
         borderRadius: 50,
         alignSelf: "center",
