@@ -29,14 +29,24 @@ export const Status = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
   color: ${({ theme }) => theme.COLORS.GRAY4};
 `;
-
-export const ContentBody = styled.View`
-  padding-top: ${RFValue(25)}px;
-  gap: ${RFValue(20)}px;
-`;
-
 export const Avatar = styled.Image`
   height: ${RFValue(56)}px;
   width: ${RFValue(56)}px;
   border-radius: 35px;
+`;
+
+export const ContentBody = styled.View`
+  padding-top: ${RFValue(25)}px;
+  gap: ${RFValue(15)}px;
+  flex-direction: row;
+`;
+
+export const ContentFooter = styled.View`
+  padding-top: ${RFValue(35)}px;
+`;
+
+export const Title = styled.Text`
+  font-size: ${RFValue(20)}px;
+  font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+  padding-bottom: ${RFValue(20)}px;
 `;
