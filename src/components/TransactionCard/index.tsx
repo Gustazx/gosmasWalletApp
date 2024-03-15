@@ -8,6 +8,7 @@ import {
   ImageSourcePropType,
 } from "react-native";
 import Gato from "@src/assets/gato.jpeg";
+import theme from "@src/styles/theme";
 
 interface TransactionCardProps {
   name: string;
@@ -61,15 +62,17 @@ export const TransactionCard = ({
           <Text
             style={{
               fontSize: 12,
-              color: "#ccc",
+              color: "gray",
+              fontFamily: theme.FONTS.POPPINSREGULAR,
             }}
           >
             teste
           </Text>
         </View>
-        <Text style={{ fontSize: 14 }}>{amount}</Text>
+        <Text style={{ fontSize: 14, fontFamily: theme.FONTS.POPPINSBOLD }}>
+          {amount}
+        </Text>
       </View>
-
       {showDetails && (
         <View
           style={{

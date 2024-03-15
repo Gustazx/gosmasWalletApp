@@ -45,7 +45,7 @@ export const ContentFooter = styled.View`
   padding-top: ${RFValue(35)}px;
 `;
 
-export const Title = styled.Text`
+export const TransactionTitle = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
   padding-bottom: ${RFValue(20)}px;

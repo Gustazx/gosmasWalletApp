@@ -6,3 +6,14 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   flex: 1;
 `;
+
+export const ContentHeader = styled.View``;
+
+export const NotificationTitle = styled.Text`
+  font-size: ${RFValue(25)}px;
+  font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+`;
+
+export const ContentBody = styled.View``;
+
+export const ContentFooter = styled.View``;
