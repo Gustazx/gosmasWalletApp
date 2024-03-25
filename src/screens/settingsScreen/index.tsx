@@ -14,13 +14,18 @@ export const SettingsScreen = ({ navigation }: any) => {
         <S.SettingsTitle>Settings</S.SettingsTitle>
       </S.ContentHeader>
       <S.ContentBody>
-        <SettingsButton iconName="person-outline">Profile</SettingsButton>
-        <SettingsButton iconName="notifications-outline">
-          Notifications
-        </SettingsButton>
-        <SettingsButton iconName="wallet-outline">Your Wallet</SettingsButton>
-        <SettingsButton iconName="key-outline">Login Settings</SettingsButton>
-        <SettingsButton iconName="call-outline">Service Center</SettingsButton>
+        <SettingsButton
+          title="Profile"
+          iconName="person-outline"
+          onPress={() => navigation.navigate("profileScreen")}
+        />
+        <SettingsButton
+          title="Notifications"
+          iconName="notifications-outline"
+        />
+        <SettingsButton title="Your Wallet" iconName="wallet-outline" />
+        <SettingsButton title="Login Settings" iconName="key-outline" />
+        <SettingsButton title="Service Center" iconName="call-outline" />
       </S.ContentBody>
       <S.ContentFooter>
         <S.LogOut onPress={() => logout()}>

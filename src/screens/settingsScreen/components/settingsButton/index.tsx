@@ -1,12 +1,12 @@
 import React from "react";
 import * as S from "./styles";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { Platform, ViewStyle } from "react-native";
+import { ButtonProps, Platform, ViewStyle } from "react-native";
 import theme from "@src/styles/theme";
 
-interface SettingsButtonProps {
-  children: React.ReactNode;
+interface SettingsButtonProps extends ButtonProps {
   iconName: string;
+  onPress?: () => void;
 }
 
 let shadowStyle: ViewStyle = {
@@ -20,13 +20,17 @@ if (Platform.OS === "android") {
   };
 }
 
-export const SettingsButton = ({ children, iconName }: SettingsButtonProps) => {
+export const SettingsButton = ({
+  title,
+  iconName,
+  onPress,
+}: SettingsButtonProps) => {
   return (
-    <S.Container>
+    <S.Container onPress={onPress}>
       <S.IconContainer style={shadowStyle}>
         <Ionicons name={iconName} size={26} />
       </S.IconContainer>
-      <S.Title>{children}</S.Title>
+      <S.Title>{title}</S.Title>
       <Ionicons name="arrow-forward-outline" size={26} />
     </S.Container>
   );
