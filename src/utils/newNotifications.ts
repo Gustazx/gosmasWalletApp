@@ -11,4 +11,22 @@ export const newNotifications = [
     content: "You spent Rp 32.000 for Coffe Cetar",
     info: "Buy drink",
   },
+  {
+    id: 3,
+    date: "29 June 2023, 9:09 PM",
+    content: "You spent Rp 32.000 for Coffe Cetar",
+    info: "Buy drink",
+  },
+  {
+    id: 4,
+    date: "29 June 2023, 9:09 PM",
+    content: "You spent Rp 32.000 for Coffe Cetar",
+    info: "Buy drink",
+  },
+  {
+    id: 5,
+    date: "29 June 2023, 9:09 PM",
+    content: "You spent Rp 32.000 for Coffe Cetar",
+    info: "Buy drink",
+  },
 ];

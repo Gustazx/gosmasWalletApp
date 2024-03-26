@@ -22,14 +22,11 @@ export const ContentBody = styled.View`
 `;
 
 export const ContentFooter = styled.View`
-  align-items: center;
-  justify-content: center;
   margin: 35px;
 `;
 
 export const LogOut = styled.TouchableOpacity`
   align-items: center;
-  justify-content: center;
 `;
 
 export const LogOutText = styled.Text`

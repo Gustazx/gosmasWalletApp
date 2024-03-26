@@ -29,7 +29,14 @@ export const SettingsScreen = ({ navigation }: any) => {
       </S.ContentBody>
       <S.ContentFooter>
         <S.LogOut onPress={() => logout()}>
-          <Ionicons name="enter-outline" size={50} color={theme.COLORS.BLUE} />
+          <Ionicons
+            name="enter-outline"
+            size={50}
+            style={{
+              color: theme.COLORS.BLUE,
+              right: 6,
+            }}
+          />
           <S.LogOutText>Log Out</S.LogOutText>
         </S.LogOut>
       </S.ContentFooter>
