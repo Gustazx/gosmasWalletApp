@@ -35,3 +35,18 @@ export const ProfileName = styled.Text`
 export const ContentBody = styled.View`
   align-items: center;
 `;
+
+export const ContentFooter = styled.View`
+  margin: 35px;
+`;
+
+export const DeleteAccount = styled.TouchableOpacity`
+  align-items: center;
+`;
+
+export const DeleteAccountText = styled.Text`
+  font-size: 18px;
+  padding-top: 14px;
+  color: ${({ theme }) => theme.COLORS.BLUE};
+  font-family: ${({ theme }) => theme.FONTS.POPPINSBOLD};
+`;
